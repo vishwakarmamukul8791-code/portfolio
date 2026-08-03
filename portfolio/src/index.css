@@ -70,6 +70,29 @@ button:focus-visible {
   padding: 0 24px;
 }
 
+.section {
+  padding: 56px 0;
+  border-top: 0.5px solid var(--border);
+}
+
+.section-eyebrow {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.section-heading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(22px, 3vw, 28px);
+  color: var(--ink);
+  margin-bottom: 20px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;
