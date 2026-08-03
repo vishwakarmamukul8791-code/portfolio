@@ -1,0 +1,15 @@
+﻿.contact {
+  padding: 36px 0;
+}
+
+.contact__text {
+  font-size: 15px;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+.contact__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
