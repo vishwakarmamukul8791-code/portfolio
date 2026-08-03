@@ -13,3 +13,10 @@
   flex-wrap: wrap;
   gap: 10px;
 }
+
+.contact__email {
+  margin-top: 14px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+}

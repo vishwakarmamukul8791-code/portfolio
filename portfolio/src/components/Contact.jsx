@@ -27,6 +27,7 @@ export default function Contact() {
             </a>
           ))}
         </div>
+        <p className="contact__email">mmukul8791@gmail.com</p>
       </div>
     </section>
   )
