@@ -1,16 +1,31 @@
-# React + Vite
+﻿# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Personal portfolio site — AI Engineer, RAG/LLM systems, TCS.
 
-Currently, two official plugins are available:
+**Live:** https://portfolio-r6c8-seven.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack
 
-## React Compiler
+React, Vite, plain CSS (no framework). Deployed on Vercel.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Sections
 
-## Expanding the Oxlint configuration
+- Hero — role, summary, links, a live diagram of ResolveIQ's retrieval pipeline
+- About — background and focus areas
+- Experience — current role at TCS
+- Skills — grouped by category
+- Projects — ResolveIQ (live RAG platform) and QueryForge (in progress)
+- Contact — GitHub, LinkedIn, LeetCode, email
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Run locally
+
+```powershell
+npm install
+npm run dev
+```
+
+## Build
+
+```powershell
+npm run build
+```
