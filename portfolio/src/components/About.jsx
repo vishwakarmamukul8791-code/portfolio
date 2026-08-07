@@ -5,17 +5,21 @@ export default function About() {
     <section id="about" className="section about">
       <div className="container">
         <span className="section-eyebrow">About</span>
+
         <h2 className="section-heading">A little about me</h2>
+
         <p className="about__text">
-          AI Engineer with 1+ year of experience at Tata Consultancy Services, building and evaluating
-          LLM-powered retrieval systems. I work across the stack — from data pipelines and retrieval logic
-          to production APIs — with a focus on systems that stay honest about what they don't know rather
-          than guessing.
+          Product Engineer working in AI/ML at Tata Consultancy Services,
+          focused on Generative AI, RAG, LLM applications, retrieval systems,
+          and production AI backends. I work across retrieval pipelines,
+          model-assisted workflows, APIs, and evaluation, with a focus on
+          grounded and reliable AI systems rather than confident guessing.
         </p>
+
         <ul className="about__meta">
           <li>BCA, Uttaranchal University</li>
           <li>Gurugram, India</li>
-          <li>Open to AI / ML Engineer roles</li>
+          <li>Open to AI / ML / Generative AI Engineer roles</li>
         </ul>
       </div>
     </section>
