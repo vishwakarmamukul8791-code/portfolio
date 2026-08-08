@@ -10,14 +10,14 @@ Personal portfolio site for Mukul, AI Engineer.
 
 React, Vite, plain CSS. Deployed on Vercel.
 
-## Sections
+## Experience
 
-- Hero — role, summary, links, a live diagram of ResolveIQ's retrieval pipeline
-- About — background and focus areas
-- Experience — current role at TCS
-- Skills — grouped by category
-- Projects — ResolveIQ (live RAG platform) and QueryForge (in progress)
-- Contact — GitHub, LinkedIn, LeetCode, email
+- Interactive AI systems console for ResolveIQ and QueryForge
+- Engineering principles focused on grounding, evaluation, and end-to-end ownership
+- Product Engineer — AI/ML experience at TCS
+- Focused capabilities across applied AI, retrieval, model adaptation, and production engineering
+- Project case studies with architecture paths and reliability decisions
+- Responsive layout, accessible interactions, reduced-motion support, and recruiter-friendly metadata
 
 ## Run locally
 

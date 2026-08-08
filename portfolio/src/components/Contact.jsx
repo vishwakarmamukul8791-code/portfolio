@@ -1,33 +1,44 @@
-﻿import "./Contact.css"
+import "./Contact.css"
 
 const links = [
   { label: "GitHub", href: "https://github.com/vishwakarmamukul8791-code" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/mukul-s-8s677" },
   { label: "LeetCode", href: "https://leetcode.com/u/Mukul863024/" },
-  { label: "Email", href: "mailto:mmukul8791@gmail.com" },
 ]
 
 export default function Contact() {
   return (
     <section id="contact" className="section contact">
-      <div className="container">
-        <span className="section-eyebrow">Contact</span>
-        <h2 className="section-heading">Let's connect</h2>
-        <p className="contact__text">
-          Open to AI / ML Engineer roles — reach out on any of these.
-        </p>
-        <div className="contact__links">
-          {links.map((link) => (
-            <a key={link.label}
-              href={link.href}
-              target={link.href.startsWith("http") ? "_blank" : undefined}
-              rel={link.href.startsWith("http") ? "noreferrer" : undefined}
-              className="btn btn--outline">
-              {link.label}
-            </a>
-          ))}
+      <div className="container contact__inner">
+        <div className="contact__lead">
+          <span className="section-eyebrow">Contact</span>
+          <h2>Let’s build reliable AI products.</h2>
+          <p>
+            I’m open to AI Engineer, ML Engineer, and Generative AI roles where
+            product thinking and strong engineering matter as much as the model.
+          </p>
         </div>
-        <p className="contact__email">mmukul8791@gmail.com</p>
+
+        <div className="contact__actions">
+          <a className="contact__email" href="mailto:mmukul8791@gmail.com">
+            <span>Email me</span>
+            <strong>mmukul8791@gmail.com</strong>
+            <i aria-hidden="true">↗</i>
+          </a>
+
+          <div className="contact__links">
+            {links.map((link) => (
+              <a key={link.label} href={link.href} target="_blank" rel="noreferrer">
+                {link.label} <span aria-hidden="true">↗</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="container contact__footer">
+        <span>Designed around evidence, evaluation, and safe AI.</span>
+        <a href="#top">Back to top ↑</a>
       </div>
     </section>
   )
