@@ -84,7 +84,7 @@ portfolio/
 └── portfolio/
     ├── public/
     │   ├── favicon.svg
-    │   └── resume.pdf
+    │   └── Mukul_Resume.pdf
     ├── src/
     │   ├── components/
     │   ├── data/
@@ -166,7 +166,7 @@ npm run preview
 The **Download resume** button serves:
 
 ```text
-portfolio/public/resume.pdf
+portfolio/public/Mukul_Resume.pdf
 ```
 
 To update the resume, replace that file with the latest PDF while keeping the filename unchanged.
@@ -174,7 +174,7 @@ To update the resume, replace that file with the latest PDF while keeping the fi
 The navigation link is:
 
 ```jsx
-<a href="/resume.pdf" download className="navbar__resume">
+<a href="/Mukul_Resume.pdf" download className="navbar__resume">
   Download resume
 </a>
 ```
@@ -197,3 +197,4 @@ When automatic deployments are enabled for the connected GitHub branch, pushing 
 - [LinkedIn](https://www.linkedin.com/in/mukul-s-8s677)
 - [GitHub](https://github.com/vishwakarmamukul8791-code)
 - [LeetCode](https://leetcode.com/u/Mukul863024/)
+
