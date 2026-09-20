@@ -5,7 +5,7 @@ const groups = [
     number: "01",
     label: "Applied AI",
     description: "Building grounded AI products and model-assisted workflows.",
-    items: ["Generative AI", "RAG", "LLMs", "SLMs", "Gemini"],
+    items: ["RAG", "Gemini", "LangGraph", "scikit-learn", "NLTK"],
   },
   {
     number: "02",
@@ -15,15 +15,15 @@ const groups = [
   },
   {
     number: "03",
-    label: "Model adaptation",
-    description: "Adapting smaller models for domain-specific tasks.",
-    items: ["Fine-tuning", "LoRA", "QLoRA", "PEFT", "Text-to-SQL"],
+    label: "Data & automation",
+    description: "Transforming structured data into useful, repeatable outputs.",
+    items: ["pandas", "NumPy", "SQL", "XML", "APScheduler"],
   },
   {
     number: "04",
     label: "Product engineering",
     description: "Taking systems from Python code to reliable deployments.",
-    items: ["Python", "FastAPI", "PostgreSQL", "React", "Docker", "CI/CD"],
+    items: ["Python", "Java", "FastAPI", "Flask", "React", "PostgreSQL", "Supabase", "Docker", "GitHub Actions", "Pytest"],
   },
 ]
 
@@ -38,7 +38,7 @@ export default function Skills() {
           </div>
           <p className="section-intro">
             A focused stack for building, evaluating, and shipping applied AI
-            systems—not a list of every tool I have ever touched.
+            systems and automating data workflows.
           </p>
         </div>
 

@@ -1,13 +1,12 @@
 import "./Experience.css"
 
 const bullets = [
-  "Develop AI-powered support workflows using Python, backend APIs, retrieval-augmented generation, and enterprise knowledge data.",
-  "Build and evaluate information-retrieval pipelines, including text preprocessing, BM25-based retrieval, relevance testing, and investigation of weak results.",
-  "Work with small language models and model-adaptation workflows for domain-specific enterprise question answering.",
-  "Evaluate generated responses for relevance, factual grounding, consistency, and failure modes, then refine retrieval and prompting strategies.",
+  "Built a defect similarity search application from scratch using Python and Flask to find relevant historical defects from CSV records.",
+  "Implemented three-stage filtering with BM25, word and character TF-IDF, Word2Vec, and WordNet for lexical shortlisting, semantic reranking, and final similarity scoring.",
+  "Built Python automation to extract interface metadata, including interface IDs and incoming/outgoing direction, from XML into Excel.",
+  "Implemented conditional XML transformations that generate both XML and Excel outputs from source interface data.",
 ]
-
-const scope = ["Applied AI", "Retrieval", "Evaluation", "Backend APIs"]
+const scope = ["NLP search", "Python", "XML / Excel"]
 
 export default function Experience() {
   return (
@@ -16,11 +15,11 @@ export default function Experience() {
         <div className="section-header">
           <div>
             <span className="section-eyebrow">Experience</span>
-            <h2 className="section-heading">Building AI for real workflows.</h2>
+            <h2 className="section-heading">Search and automation at TCS.</h2>
           </div>
           <p className="section-intro">
-            Working across retrieval, model-assisted workflows, evaluation, and
-            backend engineering in an enterprise AI/ML team.
+            Built NLP search and interface-data automation applications from scratch,
+            with a focus on practical enterprise workflows.
           </p>
         </div>
 

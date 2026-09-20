@@ -13,8 +13,8 @@ const principles = [
   },
   {
     index: "03",
-    title: "Owned end to end",
-    text: "From data and APIs to deployment, persistence, security, and the user experience.",
+    title: "Connected end to end",
+    text: "Data processing, backend logic, persistence, and interfaces designed to work together.",
   },
 ]
 
@@ -25,15 +25,15 @@ export default function About() {
         <div className="section-header">
           <div>
             <span className="section-eyebrow">About</span>
-            <h2 className="section-heading">Engineering AI beyond the demo.</h2>
+            <h2 className="section-heading">A practical approach to AI.</h2>
           </div>
 
           <div>
             <p className="about__text">
               I’m a Product Engineer working in AI/ML at Tata Consultancy
-              Services. My focus is applied Generative AI: retrieval systems,
-              LLM applications, model adaptation, evaluation, and the backend
-              infrastructure that makes these systems dependable in practice.
+              Services. My professional work includes defect similarity search and XML/Excel automation.
+              Alongside this, I build personal projects in RAG, agent orchestration,
+              and full-stack application development.
             </p>
             <p className="about__text about__text--secondary">
               I care less about confident-looking output and more about whether

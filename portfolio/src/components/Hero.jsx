@@ -1,145 +1,22 @@
-import { useState } from "react"
-import "./Hero.css"
-
-const systems = [
-  {
-    id: "resolveiq",
-    name: "ResolveIQ",
-    type: "Production RAG",
-    status: "Live",
-    input: "Why does OAuth token exchange fail?",
-    stages: ["Hybrid retrieval", "RRF fusion", "Confidence gate"],
-    output: "Grounded answer + citations",
-    note: "Weak evidence triggers a safe abstention.",
-  },
-  {
-    id: "queryforge",
-    name: "QueryForge",
-    type: "Text-to-SQL SLM",
-    status: "In build",
-    input: "Show Q2 revenue grouped by region",
-    stages: ["Schema context", "Fine-tuned SLM", "AST validation"],
-    output: "Validated read-only SQL",
-    note: "Architecture preview for the system in development.",
-  },
-]
-
+import { useState } from 'react'
+import { projects } from '../data/projects'
+import SystemDiagram, { ProjectMark } from './SystemDiagram'
+import './Hero.css'
 export default function Hero() {
-  const [activeSystem, setActiveSystem] = useState(systems[0])
-
-  return (
-    <section id="top" className="hero">
-      <div className="container hero__inner">
-        <div className="hero__content">
-          <span className="hero__eyebrow">Product Engineer · AI/ML</span>
-
-          <h1 className="hero__headline">
-            I build AI systems that know when to answer{" — "}and when to
-            abstain.
-          </h1>
-
-          <p className="hero__subhead">
-            I take applied AI from retrieval and evaluation to backend APIs and
-            production deployment—building RAG, LLM, and model-adaptation
-            systems that stay grounded in evidence.
-          </p>
-
-          <div className="hero__cta">
-            <a href="#projects" className="btn btn--primary">
-              Explore my work
-              <span aria-hidden="true">↓</span>
-            </a>
-
-            <a
-              href="https://github.com/vishwakarmamukul8791-code"
-              target="_blank"
-              rel="noreferrer"
-              className="btn btn--outline"
-            >
-              GitHub
-              <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-
-          <div className="hero__proof" aria-label="Areas of engineering focus">
-            <div>
-              <strong>Production RAG</strong>
-              <span>Deployed end to end</span>
-            </div>
-            <div>
-              <strong>Retrieval quality</strong>
-              <span>Hybrid search + evaluation</span>
-            </div>
-            <div>
-              <strong>Model adaptation</strong>
-              <span>SLMs + safe execution</span>
-            </div>
-          </div>
-        </div>
-
-        <div className="system-console" aria-label="Interactive AI system architecture preview">
-          <div className="system-console__chrome">
-            <div className="system-console__dots" aria-hidden="true">
-              <span />
-              <span />
-              <span />
-            </div>
-            <span>mukul / ai-systems</span>
-            <span className="system-console__signal">● operational</span>
-          </div>
-
-          <div className="system-console__tabs" role="tablist" aria-label="Select a project">
-            {systems.map((system) => (
-              <button
-                key={system.id}
-                type="button"
-                role="tab"
-                aria-selected={activeSystem.id === system.id}
-                className={activeSystem.id === system.id ? "is-active" : ""}
-                onClick={() => setActiveSystem(system)}
-              >
-                {system.name}
-              </button>
-            ))}
-          </div>
-
-          <div className="system-console__body" role="tabpanel" key={activeSystem.id}>
-            <div className="system-console__meta">
-              <div>
-                <span className="system-console__label">SYSTEM</span>
-                <strong>{activeSystem.type}</strong>
-              </div>
-              <span className={`system-console__status system-console__status--${activeSystem.id}`}>
-                {activeSystem.status}
-              </span>
-            </div>
-
-            <div className="system-console__input">
-              <span className="system-console__label">INPUT</span>
-              <p>“{activeSystem.input}”</p>
-            </div>
-
-            <div className="system-console__flow">
-              {activeSystem.stages.map((stage, index) => (
-                <div className="system-console__stage" key={stage}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <strong>{stage}</strong>
-                  <span className="system-console__check" aria-hidden="true">✓</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="system-console__output">
-              <span className="system-console__label">DECISION</span>
-              <div>
-                <strong>{activeSystem.output}</strong>
-                <span aria-hidden="true">→</span>
-              </div>
-              <p>{activeSystem.note}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
+  const [active, setActive] = useState(projects[0])
+  return <section id="top" className="hero"><div className="container hero__inner">
+    <div className="hero__content"><span className="hero__eyebrow">Mukul · AI/ML Engineer</span>
+      <h1 className="hero__headline">Practical AI.<br/><span>Thoughtful engineering.</span></h1>
+      <p className="hero__subhead">I build applications that connect information to action—from grounded answers to controlled agent workflows and Python automation.</p>
+      <p className="hero__identity">Currently at TCS <span aria-hidden="true">/</span> Gurugram, India</p>
+      <div className="hero__cta"><a href="#projects" className="btn btn--primary">Explore projects <span aria-hidden="true">↘</span></a><a href="#contact" className="btn btn--outline">Get in touch <span aria-hidden="true">↗</span></a></div>
+      <div className="hero__proof"><div><strong>Retrieval</strong><span>Evidence before answers</span></div><div><strong>Agents</strong><span>Explicit execution controls</span></div><div><strong>Automation</strong><span>Repeatable data workflows</span></div></div>
+    </div>
+    <div className="architecture-panel"><div className="architecture-panel__top"><span>PROJECT ARCHITECTURE</span><span>01 — 03</span></div>
+      <div className="architecture-panel__switch" aria-label="Choose a project architecture">{projects.map(p=><button key={p.id} type="button" aria-pressed={active.id===p.id} onClick={()=>setActive(p)}>{p.name}</button>)}</div>
+      <div className="architecture-panel__title"><ProjectMark kind={active.id}/><div><h2>{active.name}</h2><p>{active.category}</p></div></div>
+      <SystemDiagram project={active}/><div className="architecture-panel__note"><span aria-hidden="true">↳</span><p>{active.note}</p></div>
+      <a className="architecture-panel__link" href={active.architecture} target="_blank" rel="noreferrer">Explore the architecture <span aria-hidden="true">↗</span></a>
+    </div>
+  </div></section>
 }

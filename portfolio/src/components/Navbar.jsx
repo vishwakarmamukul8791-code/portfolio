@@ -2,10 +2,10 @@ import { useEffect, useState } from "react"
 import "./Navbar.css"
 
 const links = [
-  { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
-  { label: "Capabilities", href: "#skills" },
-  { label: "Work", href: "#projects" },
+  { label: "Projects", href: "#projects" },
+  { label: "Toolkit", href: "#skills" },
+  { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
 ]
 
@@ -28,6 +28,13 @@ export default function Navbar() {
     }
   }, [])
 
+  useEffect(() => {
+    const closeOnEscape = (event) => { if (event.key === "Escape") { setOpen(false); document.querySelector(".navbar__toggle")?.focus() } }
+    const closeOnDesktop = () => { if (window.innerWidth > 800) setOpen(false) }
+    window.addEventListener("keydown", closeOnEscape)
+    window.addEventListener("resize", closeOnDesktop)
+    return () => { window.removeEventListener("keydown", closeOnEscape); window.removeEventListener("resize", closeOnDesktop) }
+  }, [])
   const closeMenu = () => setOpen(false)
 
   return (
@@ -47,13 +54,16 @@ export default function Navbar() {
         </nav>
 
         <div className="navbar__actions">
-          <a href="/resume.pdf" download className="navbar__resume">
-            Resume
+          {/* <a href="mailto:mmukul8791@gmail.com?subject=Resume%20request" className="navbar__resume">
+            Request resume
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <path d="M12 3v12m0 0l-4-4m4 4l4-4" />
-              <path d="M5 21h14" />
+              <path d="M4 6h16v12H4zM4 6l8 6 8-6" />
+              
             </svg>
-          </a>
+          </a> */}
+          <a href="/Mukul_Resume.pdf" download className="navbar__resume">
+              Download Resume
+                </a>
 
           <button
             type="button"
